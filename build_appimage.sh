@@ -8,10 +8,10 @@ RELEASE="stable"
 VERSION="1.22.7"
 GAMEURL="https://cdn.vintagestory.at/gamefiles/$RELEASE/vs_client_linux-x64_$VERSION.tar.gz"
 
-export ICON=/vintagestory/assets/gameicon.png
-export DESKTOP=/vintagestory/Vintagestory.desktop
+export ICON=./vintagestory/assets/gameicon.png
+export DESKTOP=./vintagestory/Vintagestory.desktop
 export OUTPATH=/dist
-export MAIN_BIN=/vintagestory/run.sh
+export MAIN_BIN=./vintagestory/run.sh
 export OUTNAME="vintagestory-anylinux-$ARCH-$VERSION.AppImage"
 export DEPLOY_DOTNET=1
 
