@@ -13,3 +13,5 @@ this appimage is an anylinux appimage which should run under any linux distribut
 If you'd like to confirm if it does work on alpine youre free to go :)
 
 If appimage would be out of date please create an issue or make a fork and change version variable in the script
+
+files can be found in actions, those are too large for release action to upload
