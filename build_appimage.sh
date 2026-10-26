@@ -37,7 +37,7 @@ find vintagestory/assets/ -not -path "*/fonts/*" -regex ".*/.*[A-Z].*" | while r
 		ln -sf "$filename" "${file%/*}"/"${filename,,}"
 	done
 
-mkdir -p /AppDir/bin/
+mkdir -p ./AppDir/bin/
 
 cp -r ./vintagestory/* ./AppDir/bin/
 cp ./run.sh ./AppDir/bin/run.sh
