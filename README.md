@@ -14,7 +14,5 @@ If you'd like to confirm if it does work on alpine youre free to go :)
 
 If appimage would be out of date please create an issue or make a fork and change version variable in the script
 
-files can be found in actions(on gitea only), those are too large for release action to upload, on github mirror those will be manually uploaded to release
-
 # Gitea Repo Link
 [main repository link](https://public-gitea.mr-adrian.com/MrAdrianPl/vintagestory_appimage)
