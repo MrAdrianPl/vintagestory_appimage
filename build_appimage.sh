@@ -50,6 +50,6 @@ echo "Bundling AppImage..."
 echo "---------------------------------------------------------------"
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
-./quick-sharun /vintagestory/run.sh
+./quick-sharun ./vintagestory/run.sh
 
 ./quick-sharun --make-appimage
