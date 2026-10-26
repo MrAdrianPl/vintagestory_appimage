@@ -1,0 +1,24 @@
+name: release
+run-name: Building Appimage
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  Build-Appimage:
+    runs-on: archlinux-latest
+    steps:
+      - run: pacman-key --init
+      - run: pacman -Syu --noconfirm
+      - run: pacman -S nodejs --noconfirm
+      - name: download source
+        uses: actions/checkout@v4
+      - run: chmod +x ./build_appimage.sh
+      - run: ./build_appimage.sh
+      - name: upload to release
+        uses: akkuman/gitea-release-action@v1
+        with:
+          files: |-
+            /dist/*.AppImage

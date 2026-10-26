@@ -1,0 +1,22 @@
+name: push to main
+run-name: Building Appimage
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build-Appimage:
+    runs-on: archlinux-latest
+    steps:
+      - run: pacman-key --init
+      - run: pacman -Syu --noconfirm
+      - run: pacman -S nodejs --noconfirm
+      - name: download source
+        uses: actions/checkout@v4
+      - run: chmod +x ./build_appimage.sh
+      - run: ./build_appimage.sh
+      - uses: https://github.com/christopherHX/gitea-upload-artifact@v4
+        with:
+          name: appimage-uploaded
+          path: /dist/*.AppImage
